@@ -1,4 +1,4 @@
-function Sidebar({ data, handleToggleModal, showModal }) {
+function SideBar({ data, handleToggleModal, showModal }) {
   return (
     <div className={`sidebar ${showModal ? "visible" : "hidden"}`}>
       <div onClick={handleToggleModal} className={`bgOverlay ${showModal ? "visible" : "hidden"}`}></div>
@@ -16,4 +16,4 @@ function Sidebar({ data, handleToggleModal, showModal }) {
   );
 }
 
-export default Sidebar;
+export default SideBar;

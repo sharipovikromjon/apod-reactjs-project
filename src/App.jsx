@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Main from "./components/Main";
-import Sidebar from "./components/Sidebar";
+import SideBar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
 function App() {
@@ -53,20 +53,12 @@ function App() {
       )}
       {/* Option 1: */}
       {showModal && (
-        <Sidebar
+        <SideBar
           data={data}
           handleToggleModal={handleToggleModal}
           showModal={showModal}
         />
       )}
-      {/* Option 2:
-       */}
-
-      {/* <Sidebar
-          data={data}
-          handleToggleModal={handleToggleModal}
-          showModal={showModal}
-        /> */}
 
       {data && <Footer data={data} handleToggleModal={handleToggleModal} />}
     </>
