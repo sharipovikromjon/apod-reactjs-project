@@ -95,6 +95,17 @@ footer button:hover {
   display: flex;
   flex-direction: column;
   z-index: 10;
+  transform: translateX(100%);
+  transition: all 0.9s ease-in-out; /* Increase transition duration for smoother effect */
+}
+
+.sidebar.visible {
+  transform: translateX(0);
+}
+
+.sidebar.hidden {
+  transform: translateX(100%);
+  display: none; /* Ensure the sidebar is removed from the DOM flow */
 }
 
 .bgOverlay {
@@ -102,6 +113,11 @@ footer button:hover {
   inset: 0;
   background: #030615;
   opacity: 0.6;
+  
+}
+
+.bgOverlay.hidden {
+  display: none; /* Ensure the overlay is removed when the sidebar is hidden */
 }
 
 .sidebarContents {
@@ -117,6 +133,7 @@ footer button:hover {
   max-width: 800px;
   margin-left: auto;
   background: #030615;
+  transition: all 0.9s ease-in-out;  /* Smooth transition for the sidebar contents */
 }
 
 .sidebarContents h2 {
@@ -177,6 +194,7 @@ footer button:hover {
   }
 }
 
+
 @media (min-width: 640px) {
   .sidebar {
     position: relative;
@@ -194,6 +212,6 @@ footer button:hover {
   .bgOverlay {
     right: 0;
     left: unset;
-    width: 100vw;
+    width: 34vw;
   }
 }

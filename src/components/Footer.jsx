@@ -1,12 +1,15 @@
-function Footer() {
+function Footer({ data, handleToggleModal }) {
   return (
-    <div>
+    <footer>
+      <div className="bgGradient"></div>
       <div>
-        <h2>The Brutal Martian Landscape</h2>
-        <h1>APOD Project</h1>
+        <h1>APOD PROJECT</h1>
+        <h2>{data?.title}</h2>
       </div>
-      <button><i className="fa-solid fa-circle-info"></i></button>
-    </div>
+      <button onClick={handleToggleModal}>
+        <i className="fa-solid fa-circle-info"></i>
+      </button>
+    </footer>
   );
 }
 

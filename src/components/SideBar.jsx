@@ -1,14 +1,14 @@
-function Sidebar() {
+function Sidebar({ data, handleToggleModal, showModal }) {
   return (
-    <div className="sidebar">
-      <div className="bgOverlay"></div>
+    <div className={`sidebar ${showModal ? "visible" : "hidden"}`}>
+      <div onClick={handleToggleModal} className={`bgOverlay ${showModal ? "visible" : "hidden"}`}></div>
       <div className="sidebarContents">
-        <h2>The Brutal Martian Landscape</h2>
+        <h2>{data?.title}</h2>
         <div className="descriptionContainer">
-          <p className="descriptionTitle"></p>
-          <p></p>
+          <p className="descriptionTitle">{data?.date}</p>
+          <p>{data?.explanation}</p>
         </div>
-        <button>
+        <button onClick={handleToggleModal}>
           <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>

@@ -1,8 +1,10 @@
-
-function Main() {
+function Main({ data }) {
+  let src = data.hdurl
   return (
-    <div className="imgContainer"><img className="bgImage" src="/mars.png" alt="mars-demo-img" /></div>
-  )
+    <div className="imgContainer">
+      <img className="bgImage" src={src} alt={data.title || "bg-img"} />
+    </div>
+  );
 }
 
-export default Main
+export default Main;
