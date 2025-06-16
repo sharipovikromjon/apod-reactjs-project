@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Main from "./components/Main";
-import Sidebar from "./components/Sidebar"; // Fix: Ensure the case matches the file name
+import Tab from "./components/Tab"; // Fix: Ensure the case matches the file name
 import Footer from "./components/Footer";
 
 function App() {
@@ -51,9 +51,8 @@ function App() {
           <i className="fa-solid fa-gear"></i>
         </div>
       )}
-      {/* Option 1: */}
       {showModal && (
-        <Sidebar
+        <Tab
           data={data}
           handleToggleModal={handleToggleModal}
           showModal={showModal}
