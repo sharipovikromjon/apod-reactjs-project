@@ -1,7 +1,11 @@
 function Main({ data }) {
   return (
     <div className="imgContainer">
-      <img className="bgImage" src={data.hdurl} alt={data.title || "bg-img"} />
+      <img
+        className="bgImage"
+        src={data.hdurl || "/mars.png"}
+        alt={data.title || "bg-img"}
+      />
     </div>
   );
 }
